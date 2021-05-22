@@ -1,0 +1,27 @@
+version: '3'
+services:
+  web:
+    build: 
+        context: .
+        dockerfile: ./php/Dockerfile
+    ports:
+      - 8000:80
+    volumes:
+      - type: bind
+        source: ../../work/create-profile/
+        target: /var/www/site/
+  db:
+    build: 
+        context: .
+        dockerfile: ./mysql/Dockerfile
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=[MYSQL_DATABASE]
+      - MYSQL_USER=[MYSQL_USER]
+      - MYSQL_PASSWORD=[MYSQL_PASSWORD]
+      - MYSQL_ROOT_PASSWORD=[MYSQL_ROOT_PASSWORD]
+  adminer:
+    image: adminer
+    ports:
+      - 8001:8080
