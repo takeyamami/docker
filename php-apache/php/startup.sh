@@ -1,5 +1,5 @@
 #!/bin/bash
-chown ec2-user:ec2-user /var/www/site/
+chown apache:apache /var/www/site/
 chmod 705 /var/www
 
 /sbin/service crond start
