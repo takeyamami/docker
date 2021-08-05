@@ -2,10 +2,8 @@
 chown apache:apache /var/www/site/
 chmod 705 /var/www
 
-/sbin/service crond start
-/sbin/service httpd start
-
-/etc/rc.d/init.d/sshd start
+service crond start
+service apache2 start
 
 while true
 do
