@@ -5,7 +5,7 @@ services:
         context: .
         dockerfile: ./php/Dockerfile
     ports:
-      - 8000:80
+      - 8081:80
     volumes:
       - type: bind
         source: ../../work/CI_Vue/
