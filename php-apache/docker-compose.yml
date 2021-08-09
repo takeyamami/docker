@@ -8,5 +8,5 @@ services:
       - 8081:80
     volumes:
       - type: bind
-        source: ../../work/CI_Vue/
+        source: ../../../work/CI_Vue/
         target: /var/www/site/
