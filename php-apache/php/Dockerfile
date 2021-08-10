@@ -37,7 +37,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp
 RUN mv /tmp/composer.phar /usr/local/bin/composer
 
 ## apacheの設定
-COPY ./php/conf-enabled/ /etc/apache2/conf-enabled/
+COPY ./php/sites-enabled/ /etc/apache2/sites-enabled/
 
 ## make logs dir
 #RUN mkdir /home/ec2-user/logs
